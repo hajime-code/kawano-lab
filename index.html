@@ -38,9 +38,6 @@
 </head>
 <body class="text-gray-800 bg-slate-50 selection:bg-blue-200">
 
-  <!-- ============================================== -->
-  <!-- 🗄️ データ定義（日本語・英語） -->
-  <!-- ============================================== -->
   <script>
     const SITE_DATA = {
       ja: {
@@ -56,9 +53,7 @@
           title: "About Us",
           desc: "世の中で実用化されている機能性物質の開発では、多孔質物質やナノカーボン系材料に見られるように、それを構成する分子そのものだけでなく、分子集合体が形成する「構造」と「特性」の関係を理解することが極めて重要です。\n\n我々の研究グループのモチベーションは、有機合成や錯体合成を駆使して大きなサイズを持つ独自の分子を創製し、それらを自在に組み上げることによって、『巨大分子の集合体』の化学を展開することです。拡張したπ共役分子の集合体を精密に制御することで、resilience（しなやかさ）をもつソフトマテリアルや、半導体特性を含めた有機エレクトロニクス、バイオイメージングに資する次世代の機能性材料の開発を目指しています。",
           gallery: [
-            { img: "https://placehold.co/800x450/e2e8f0/475569?text=Research+Image+1", title: "研究テーマや成果のタイトル", desc: "ここに画像に関する簡単な説明文を入れます。後から自由に変更・追加できます。" },
-            { img: "https://placehold.co/800x450/e2e8f0/475569?text=Research+Image+2", title: "研究テーマや成果のタイトル", desc: "ここに画像に関する簡単な説明文を入れます。後から自由に変更・追加できます。" },
-            { img: "https://placehold.co/800x450/e2e8f0/475569?text=Research+Image+3", title: "研究テーマや成果のタイトル", desc: "ここに画像に関する簡単な説明文を入れます。後から自由に変更・追加できます。" }
+            { img: "src/img/about_img_01.png", title: "研究イメージ 1", desc: "" },
           ],
           dragHint: "Drag to explore"
         },
@@ -72,34 +67,34 @@
         contact: {
           title: "Contact",
           addrTitle: "Address",
-          address: "〒501-1193 岐阜県岐阜市柳戸1-1\n岐阜大学 工学部 化学・生命工学科 物質化学コース",
+          address: "〒501-1193 岐阜県岐阜市柳戸1-1\n岐阜大学 工学部 化学・生命工学科 物質化学コース\n工学部　C棟　C310（オフィス）",
+          mapLink: "https://www.eng.gifu-u.ac.jp/other/access.html",
           mapBtn: "大学アクセスマップ →",
-          emailInfo: "kawano.shinichiro.y0@ (末尾に gifu-u.ac.jp を追加)"
+          emailInfo: "kawano.shinichiro.y0@f.gifu-u.ac.jp"
         },
         news: {
           title: "News",
           items: [
-            { date: "2026.04.01", text: "岐阜大学にて河野研究室が新たにスタートしました。", isNew: true },
-            { date: "2026.04.01", text: "新4年生が研究室に配属されました。", isNew: true },
-            { date: "2025.11.28", text: "「分子夾雑に挑む化学＠岐阜」にて招待講演を行いました。", isNew: false },
-            { date: "2023.01.21", text: "共同研究の成果が学術雑誌「Nanoscale」のFront Coverに選ばれました。", isNew: false }
+            { date: "2026.04.01", text: "新四年生(山野君、松尾君)が研究室メンバーに加わりました。", isNew: true },
+            { date: "2026.03.19", text: "日本化学会　第106回春季年会　アジア国際シンポジウムー高分子ディビジョンで研究発表（招待講演）しました。", isNew: false },
+            { date: "2026.01.01", text: "河野研究室がスタートしました。", isNew: false }
           ]
         },
         research: {
           title: "Research",
           items: [
-            { icon: "flask-conical", title: "有機合成や錯体合成による巨大なπ拡張系分子の創製", desc: "機能性物質の基盤となる、大きなサイズを持つ独自の分子を精密に合成します。有機合成化学や錯体化学の手法を駆使して、拡張したπ共役系を持つこれまでにない巨大分子の設計と創製に挑戦します。" },
-            { icon: "users", title: "大きなπ拡張系分子の自己組織化を利用したソフトマテリアル開拓", desc: "合成した巨大分子が自発的に集まる現象（自己組織化）を利用し、液晶や特異な分子集合体に基づく新しいソフトマテリアルを開発します。集合体の構造を制御することで、resilience（しなやかさ）などの優れた特性を引き出します。" },
-            { icon: "book-open", title: "エレクトロニクスやバイオに資する刺激応答性分子の開発", desc: "外部からの刺激に応答して構造や性質を変化させる分子を開発します。有機エレクトロニクス（半導体特性など）や、生体内を可視化するバイオイメージングへの応用を見据えた機能性材料の創出を推進します。" }
+            { img: "src/img/research_img_01.png", title: "有機合成や錯体合成による巨大なπ拡張系分子の創製", desc: "有機化学や錯体化学の合成法を利用して、大きなサイズを持つ独自の分子を合成します。構造有機化学的なアプローチから、拡張したπ共役系を持つ新奇な巨大分子の設計と創製に挑戦します。" },
+            { img: "src/img/research_img_02.png", title: "大きなπ拡張系分子の自己組織化を利用したソフトマテリアル開拓", desc: "合成した巨大分子が自発的に集まる現象（自己組織化）を利用し、液晶や特異な分子集合体に基づく新しいソフトマテリアルを開発します。集合体の構造を制御することで、resilience（しなやかさ）などの優れた特性を引き出します。" },
+            { img: "src/img/research_img_03.png", title: "エレクトロニクスやバイオに資する刺激応答性分子の開発", desc: "外部からの刺激に応答して構造や性質を変化させる分子を開発します。有機エレクトロニクス（半導体特性など）や、生体内を可視化するバイオイメージングへの応用を見据えた機能性材料の創出を推進します。" }
           ]
         },
         member: {
           title: "Member",
-          msg: "「有機合成の力で巨大な分子を創り出し、それらが組み上がってできる未知の「集合体」の性質を解き明かす。そこから、しなやかで新しい機能を持つ材料を生み出すという、化学のモノづくりの醍醐味を一緒に味わいましょう！」",
+          msg: "「有機化学および錯体化学の知見を利用して巨大分子を創り出し、それらが組み上がってできる未知の「集合体」の性質を解き明かします。そこから生まれるしなやかさや斬新な機能特性を引き出す、モノづくりの醍醐味を一緒に味わいましょう！」",
           histTitle: "Brief History",
           history: [
             { year: "2006.03", event: "九州大学大学院工学府 物質創造工学専攻 博士後期課程修了" },
-            { year: "2006.04", event: "マックスプランク高分子研究所 博士研究員" },
+            { year: "2006.04", event: "ドイツ マックスプランク高分子研究所 博士研究員" },
             { year: "2008.07", event: "名古屋大学 大学院理学研究科 助教" },
             { year: "2015.12", event: "名古屋大学 大学院理学研究科 講師" },
             { year: "2026.01", event: "岐阜大学 工学部 化学・生命工学科 物質化学コース 准教授（現職）" }
@@ -107,19 +102,14 @@
           mapLink: "researchmap で業績を詳しく見る",
           stdTitle: "Students",
           students: [
-            { grade: "M2 (修士2年)", count: "0名" },
-            { grade: "M1 (修士1年)", count: "0名" },
-            { grade: "B4 (学部4年)", count: "0名 (2026年度配属予定)" }
+            { grade: "B4 (学部4年)", count: "2名<br>・山野　拓海<br>・松尾　暁和" }
           ]
         },
         pub: {
           title: "Publications",
-          note: "※代表的な論文を掲載しています。",
-          items: [
-            { year: "2023", title: "Self-assembly of peptide nanofibers and DNA nanoflowers in an aqueous mixed state", journal: "Nanoscale, 15(3), 1056-1064 (Front Cover)", authors: "S. Sugiura, S. Kawano, K. Suzuki, M. Ikeda et al." },
-            { year: "2021", title: "Shape-Persistent Macrocycles as Building Blocks for Nanoporous Soft Materials", journal: "Accounts of Chemical Research, 54(12), 2683-2696", authors: "S. Kawano, K. Ishiwari, et al." },
-            { year: "2019", title: "Development of functional liquid crystals with nanospace", journal: "Journal of the American Chemical Society, 141(10), 4257-4261", authors: "S. Kawano, M. Ikeda, et al." }
-          ]
+          note: "",
+          linkMsg: "こちらをご覧下さい。",
+          url: "https://researchmap.jp/7000016501?lang=ja"
         },
         footer: "Kawano Laboratory, Gifu University. All Rights Reserved."
       },
@@ -128,18 +118,17 @@
         meta: { title: "Kawano Lab | Gifu University", desc: "Official website of Kawano Laboratory, Department of Chemistry and Biomolecular Science, Gifu University." },
         nav: { home: "Home", news: "News", research: "Research", member: "Member", pub: "Publications" },
         hero: {
-          catch: "Assembling macromolecules to create novel functions and structures",
-          univ: "Dept. of Chemistry and Biomolecular Science, Faculty of Engineering, Gifu Univ.",
+          catch: "Assembling large molecules to explore novel structures and functions",
+          univ: "Department of Chemistry and Biomolecular Science,\nFaculty of Engineering, Gifu University",
           lab: "Kawano Laboratory",
           scroll: "Scroll"
         },
         about: {
           title: "About Us",
-          desc: "In the development of functional materials currently in practical use, such as porous materials and nanocarbon-based materials, it is extremely important to understand not only the molecules themselves but also the relationship between the 'structure' formed by molecular assemblies and their 'properties'.\n\nThe motivation of our research group is to develop the chemistry of 'macromolecular assemblies' by creating unique, large-sized molecules through organic and complex synthesis, and assembling them at will. By precisely controlling the assembly of extended π-conjugated molecules, we aim to develop next-generation functional materials, including soft materials with resilience, organic electronics with semiconductor properties, and materials for bioimaging.",
+          desc: "In the development of functional materials in practical use, such as porous materials and nanocarbon-based materials, it is essential to understand not only the individual molecules but also the relationship between the structures formed by molecular assemblies and their properties.\n\nOur research focuses on is the chemistry of macromolecular assemblies. We synthesize large molecules through organic and coordination chemistry and assemble them via “self-assembly”. By precisely controlling the assembly of extended π-conjugated molecules, we aim to explore new frontier of functional materials, including resilient soft materials, organic electronics with semiconductor properties, and materials for bioimaging.",
           gallery: [
-            { img: "https://placehold.co/800x450/e2e8f0/475569?text=Research+Image+1", title: "Title of Research or Achievement", desc: "Brief description of the image goes here. This is a placeholder and can be easily changed or added later." },
-            { img: "https://placehold.co/800x450/e2e8f0/475569?text=Research+Image+2", title: "Title of Research or Achievement", desc: "Brief description of the image goes here. This is a placeholder and can be easily changed or added later." },
-            { img: "https://placehold.co/800x450/e2e8f0/475569?text=Research+Image+3", title: "Title of Research or Achievement", desc: "Brief description of the image goes here. This is a placeholder and can be easily changed or added later." }
+            { img: "src/img/about_research1.png", title: "Research Image 1", desc: "" },
+            { img: "src/img/about_research2.png", title: "Research Image 2", desc: "" }
           ],
           dragHint: "Drag to explore"
         },
@@ -153,34 +142,34 @@
         contact: {
           title: "Contact",
           addrTitle: "Address",
-          address: "1-1 Yanagido, Gifu City, Gifu 501-1193, Japan\nDept. of Chemistry and Biomolecular Science, Faculty of Engineering, Gifu Univ.",
+          address: "1-1 Yanagido, Gifu City, Gifu 501-1193, Japan\nDept. of Chemistry and Biomolecular Science, Faculty of Engineering, Gifu Univ.\nFaculty of Engineering, Bldg C, Room C310",
+          mapLink: "https://www.eng.gifu-u.ac.jp/other/e/access.html",
           mapBtn: "University Access Map →",
-          emailInfo: "kawano.shinichiro.y0@ (add gifu-u.ac.jp at the end)"
+          emailInfo: "kawano.shinichiro.y0@f.gifu-u.ac.jp"
         },
         news: {
           title: "News",
           items: [
-            { date: "2026.04.01", text: "Kawano Laboratory has newly started at Gifu University.", isNew: true },
-            { date: "2026.04.01", text: "New 4th-year undergraduate students have joined the lab.", isNew: true },
-            { date: "2025.11.28", text: "Gave an invited lecture at 'Chemistry Challenging Molecular Crowding @ Gifu'.", isNew: false },
-            { date: "2023.01.21", text: "Results of our collaborative research were selected as the Front Cover of 'Nanoscale'.", isNew: false }
+            { date: "2026.04.01", text: "Two undergraduate students, Yamano and Matsuo, joined our laboratory.", isNew: true },
+            { date: "2026.03.19", text: "Kawano presented a talk at the Asian International Symposium (Polymer Division) of the 106th Annual Meeting of the Chemical Society of Japan.", isNew: false },
+            { date: "2026.01.01", text: "Our laboratory has newly started at Gifu University.", isNew: false }
           ]
         },
         research: {
           title: "Research",
           items: [
-            { icon: "flask-conical", title: "Creation of Giant π-Extended Molecules via Organic/Complex Synthesis", desc: "We precisely synthesize unique large-sized molecules that serve as the foundation for functional materials. Utilizing organic and complex chemistry techniques, we challenge the design and creation of unprecedented giant molecules with extended π-conjugated systems." },
-            { icon: "users", title: "Development of Soft Materials Using Self-Assembly of Large π-Extended Molecules", desc: "By utilizing the spontaneous assembly (self-assembly) of the synthesized giant molecules, we develop new soft materials based on liquid crystals and unique molecular assemblies. By controlling the structure of these assemblies, we elicit excellent properties such as resilience." },
-            { icon: "book-open", title: "Development of Stimuli-Responsive Molecules for Electronics and Biology", desc: "We develop molecules that change their structure and properties in response to external stimuli. We promote the creation of functional materials with an eye toward applications in organic electronics (e.g., semiconductor properties) and bioimaging to visualize the inside of living organisms." }
+            { img: "src/img/research_img_01.png", title: "Construction of Giant π-Extended Molecules via Organic and Coordination Chemistry", desc: "We precisely synthesize unique large molecules that self-assemble into functional materials. By leveraging methodologies in organic and coordination chemistry, we pursue the design and creation of unprecedented giant molecules with extended π-conjugated frameworks." },
+            { img: "src/img/research_img_02.png", title: "Exploration of Soft Materials through Self-Assembly of Large π-Extended Molecules", desc: "We develop novel soft materials derived from liquid crystals and unique molecular assemblies by exploiting the self-assembly of synthesized giant molecules. By controlling the structures of these assemblies, we investigate their supramolecular organization and related properties, such as resilience." },
+            { img: "src/img/research_img_03.png", title: "Development of Stimuli-Responsive Molecules for Electronics and Biological Applications", desc: "We develop molecules that undergo structural and property changes in response to external stimuli. We aim to create functional materials for applications in organic electronics, including semiconducting materials as well as in bioimaging." }
           ]
         },
         member: {
           title: "Member",
-          msg: "\"Creating giant molecules with the power of organic synthesis and unraveling the properties of unknown 'assemblies' they form. Let's experience the true thrill of chemical creation by producing materials with flexible and novel functions together!\"",
+          msg: "\"We create giant molecules through organic chemistry and coordination chemistry and elucidate the structures and properties of the supramolecular assemblies they form. We explore the development of new materials, including liquid crystals and soft materials, based on the giant molecules.\"",
           histTitle: "Brief History",
           history: [
             { year: "2006.03", event: "Completed Ph.D., Dept. of Applied Chemistry, Kyushu University" },
-            { year: "2006.04", event: "Postdoctoral Researcher, Max Planck Institute for Polymer Research" },
+            { year: "2006.04", event: "Postdoctoral Researcher, Max Planck Institute for Polymer Research, Germany" },
             { year: "2008.07", event: "Assistant Professor, Graduate School of Science, Nagoya University" },
             { year: "2015.12", event: "Lecturer, Graduate School of Science, Nagoya University" },
             { year: "2026.01", event: "Associate Professor, Dept. of Chemistry and Biomolecular Science, Gifu University" }
@@ -188,19 +177,14 @@
           mapLink: "View detailed achievements on researchmap",
           stdTitle: "Students",
           students: [
-            { grade: "M2 (Master 2nd Year)", count: "0" },
-            { grade: "M1 (Master 1st Year)", count: "0" },
-            { grade: "B4 (Undergraduate 4th Year)", count: "0 (Joining in 2026)" }
+            { grade: "B4 students", count: "Takumi Yamano<br>Akikazu Matsuo" }
           ]
         },
         pub: {
           title: "Publications",
-          note: "* Selected publications are listed.",
-          items: [
-             { year: "2023", title: "Self-assembly of peptide nanofibers and DNA nanoflowers in an aqueous mixed state", journal: "Nanoscale, 15(3), 1056-1064 (Front Cover)", authors: "S. Sugiura, S. Kawano, K. Suzuki, M. Ikeda et al." },
-             { year: "2021", title: "Shape-Persistent Macrocycles as Building Blocks for Nanoporous Soft Materials", journal: "Accounts of Chemical Research, 54(12), 2683-2696", authors: "S. Kawano, K. Ishiwari, et al." },
-             { year: "2019", title: "Development of functional liquid crystals with nanospace", journal: "Journal of the American Chemical Society, 141(10), 4257-4261", authors: "S. Kawano, M. Ikeda, et al." }
-          ]
+          note: "",
+          linkMsg: "Please see here.",
+          url: "https://researchmap.jp/7000016501?lang=en"
         },
         footer: "Kawano Laboratory, Gifu University. All Rights Reserved."
       }
@@ -209,26 +193,22 @@
     let currentLang = 'ja';
   </script>
 
-  <!-- ============================================== -->
-  <!-- ナビゲーションバー -->
-  <!-- ============================================== -->
-  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-6">
+  <nav id="navbar" class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 py-3 md:py-4 transition-all duration-300">
     <div class="container mx-auto px-6 flex justify-between items-center">
       <div class="font-bold text-xl md:text-2xl font-en tracking-widest cursor-pointer transition-colors text-slate-900" onclick="navigateTo('home')">
         KAWANO<span class="font-light text-blue-600">LAB.</span>
       </div>
       
-      <div id="nav-links-container" class="hidden md:flex space-x-8 font-en text-sm tracking-widest uppercase font-medium text-slate-800 lg:text-white/90 transition-colors items-center">
-        <button onclick="navigateTo('news')" class="nav-link hover:text-blue-500 transition-colors" data-target="news" data-i18n="nav.news">News</button>
-        <button onclick="navigateTo('research')" class="nav-link hover:text-blue-500 transition-colors" data-target="research" data-i18n="nav.research">Research</button>
-        <button onclick="navigateTo('member')" class="nav-link hover:text-blue-500 transition-colors" data-target="member" data-i18n="nav.member">Member</button>
-        <button onclick="navigateTo('publications')" class="nav-link hover:text-blue-500 transition-colors" data-target="publications" data-i18n="nav.pub">Publications</button>
+      <div id="nav-links-container" class="hidden md:flex space-x-8 font-en text-sm tracking-widest uppercase font-medium text-slate-600 items-center">
+        <button onclick="navigateTo('news')" class="nav-link hover:text-blue-600 transition-colors" data-target="news" data-i18n="nav.news">News</button>
+        <button onclick="navigateTo('research')" class="nav-link hover:text-blue-600 transition-colors" data-target="research" data-i18n="nav.research">Research</button>
+        <button onclick="navigateTo('member')" class="nav-link hover:text-blue-600 transition-colors" data-target="member" data-i18n="nav.member">Member</button>
+        <button onclick="navigateTo('publications')" class="nav-link hover:text-blue-600 transition-colors" data-target="publications" data-i18n="nav.pub">Publications</button>
         
-        <!-- 🌟 言語切り替えトグル -->
-        <div class="flex items-center space-x-2 border-l border-current pl-4 ml-4 opacity-80 hover:opacity-100 transition-opacity">
-          <button onclick="toggleLanguage('ja')" id="btn-ja" class="font-bold text-blue-500">JP</button>
-          <span>/</span>
-          <button onclick="toggleLanguage('en')" id="btn-en" class="font-normal hover:text-blue-500">EN</button>
+        <div class="flex items-center space-x-2 border-l border-slate-300 pl-4 ml-4 opacity-80 hover:opacity-100 transition-opacity">
+          <button onclick="toggleLanguage('ja')" id="btn-ja" class="font-bold text-blue-600">JP</button>
+          <span class="text-slate-400">/</span>
+          <button onclick="toggleLanguage('en')" id="btn-en" class="font-normal text-slate-600 hover:text-blue-600">EN</button>
         </div>
       </div>
 
@@ -237,14 +217,12 @@
       </button>
     </div>
 
-    <!-- モバイル用メニュー -->
     <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-100 py-4 font-en tracking-widest uppercase">
        <button onclick="navigateTo('home')" class="block w-full text-left px-6 py-3 text-slate-800 hover:bg-slate-50" data-i18n="nav.home">Home</button>
        <button onclick="navigateTo('news')" class="block w-full text-left px-6 py-3 text-slate-800 hover:bg-slate-50" data-i18n="nav.news">News</button>
        <button onclick="navigateTo('research')" class="block w-full text-left px-6 py-3 text-slate-800 hover:bg-slate-50" data-i18n="nav.research">Research</button>
        <button onclick="navigateTo('member')" class="block w-full text-left px-6 py-3 text-slate-800 hover:bg-slate-50" data-i18n="nav.member">Member</button>
        <button onclick="navigateTo('publications')" class="block w-full text-left px-6 py-3 text-slate-800 hover:bg-slate-50" data-i18n="nav.pub">Publications</button>
-       <!-- モバイル用言語切り替え -->
        <div class="px-6 py-4 mt-2 border-t border-gray-100 flex space-x-4">
          <button onclick="toggleLanguage('ja')" id="btn-ja-mob" class="font-bold text-blue-600">JP</button>
          <button onclick="toggleLanguage('en')" id="btn-en-mob" class="text-slate-500">EN</button>
@@ -252,9 +230,6 @@
     </div>
   </nav>
 
-  <!-- ============================================== -->
-  <!-- 🏠 HOME ページ -->
-  <!-- ============================================== -->
   <div id="page-home" class="page-section">
     <header class="relative h-screen bg-slate-50 overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-br from-blue-900 via-slate-900 to-indigo-900 overflow-hidden">
@@ -271,7 +246,7 @@
         <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="w-full h-full fill-current"><path d="M0,50 C30,100 70,0 100,50 L100,0 L0,0 Z" /></svg>
       </div>
 
-      <div class="container mx-auto px-6 relative z-10 h-full flex items-center">
+      <div class="container mx-auto px-6 relative z-10 h-full flex items-center md:pt-0">
         <div class="w-full lg:w-[50%] pb-32 lg:pb-0">
           <div class="fade-in opacity-0 translate-y-10 transition-all duration-1000 ease-out" data-delay="100">
             <h1 class="text-[11vw] lg:text-[6vw] xl:text-[5.5vw] text-slate-900 mb-4 tracking-tight leading-none font-en" style="white-space: nowrap;">
@@ -290,7 +265,7 @@
       <div class="absolute bottom-24 lg:bottom-16 right-6 lg:right-12 z-20 text-right">
         <div class="fade-in opacity-0 translate-y-10 transition-all duration-1000 ease-out" data-delay="700">
           <p class="text-sm md:text-base text-white/90 tracking-wider font-medium leading-relaxed drop-shadow-md lang-text">
-            <span data-i18n="hero.univ">岐阜大学 工学部 化学・生命工学科 物質化学コース</span><br/>
+            <span class="whitespace-pre-line" data-i18n="hero.univ">岐阜大学 工学部 化学・生命工学科 物質化学コース</span><br/>
             <span class="text-xl md:text-2xl font-500 text-white mt-1 inline-block" data-i18n="hero.lab">河野研究室</span>
           </p>
         </div>
@@ -307,18 +282,24 @@
         <div class="fade-in opacity-0 translate-y-10 transition-all duration-1000 ease-out text-center">
           <h2 class="text-3xl font-bold text-gray-900 mb-2 font-en tracking-wider uppercase lang-text" data-i18n="about.title">About Us</h2>
           <div class="w-12 h-1 bg-blue-600 mx-auto mb-10"></div>
-          <!-- 🌟 修正: text-justify を text-left に変更し、スマホ表示時の単語間隔の不自然さを解消 -->
-          <p class="text-gray-600 leading-loose text-lg text-left md:text-center max-w-3xl mx-auto whitespace-pre-line lang-text" data-i18n="about.desc"></p>
+          <p class="text-gray-600 leading-loose text-lg text-left max-w-3xl mx-auto whitespace-pre-line lang-text" data-i18n="about.desc"></p>
         </div>
 
-        <div class="fade-in opacity-0 translate-y-10 transition-all duration-1000 ease-out" data-delay="200">
+        <!-- 複数枚の場合には以下のスライダー -->
+        <!-- <div class="fade-in opacity-0 translate-y-10 transition-all duration-1000 ease-out" data-delay="200">
           <div id="gallery-slider" class="mt-16 flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 hide-scrollbar cursor-grab slider-container">
-            <!-- ギャラリーはJSで動的生成します -->
-          </div>
+            </div>
           <div class="flex justify-center mt-2 text-slate-400 text-xs tracking-widest uppercase font-en items-center gap-2 pointer-events-none">
             <i data-lucide="arrow-right" class="transform rotate-180 w-3 h-3"></i> <span data-i18n="about.dragHint" class="lang-text">Drag to explore</span> <i data-lucide="arrow-right" class="w-3 h-3"></i>
           </div>
+        </div> -->
+
+        <div class="fade-in opacity-0 translate-y-10 mt-16 transition-all duration-1000 ease-out" data-delay="200">
+          <div class="flex justify-center">
+            <img src="src/img/about_img_01.png" alt="About Kawano Lab" class="max-w-full h-auto shadow-none">
+          </div>
         </div>
+
       </div>
     </section>
 
@@ -357,7 +338,7 @@
             <div>
               <h4 class="font-bold text-lg mb-3 lang-text" data-i18n="contact.addrTitle">Address</h4>
               <p class="text-gray-300 leading-relaxed text-sm whitespace-pre-line lang-text" data-i18n="contact.address"></p>
-              <a href="https://www.eng.gifu-u.ac.jp/other/access.html" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 text-sm text-blue-400 hover:text-white transition-colors lang-text" data-i18n="contact.mapBtn">
+              <a href="https://www.eng.gifu-u.ac.jp/other/access.html" id="map-link" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 text-sm text-blue-400 hover:text-white transition-colors lang-text" data-i18n="contact.mapBtn">
                 大学アクセスマップ &rarr;
               </a>
             </div>
@@ -375,9 +356,6 @@
   </div>
 
 
-  <!-- ============================================== -->
-  <!-- 📰 NEWS ページ -->
-  <!-- ============================================== -->
   <div id="page-news" class="page-section hidden">
     <div class="pt-32 pb-16 bg-gradient-to-r from-blue-900 to-blue-800 text-white relative overflow-hidden">
       <div class="absolute inset-0 bg-black/20"></div>
@@ -390,16 +368,12 @@
     <div class="container mx-auto px-6 py-20 max-w-4xl bg-slate-50 min-h-screen">
       <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-10">
         <div class="space-y-2" id="news-container">
-          <!-- ニュースはJSで動的生成します -->
-        </div>
+          </div>
       </div>
     </div>
   </div>
 
 
-  <!-- ============================================== -->
-  <!-- 🔬 RESEARCH ページ -->
-  <!-- ============================================== -->
   <div id="page-research" class="page-section hidden">
     <div class="pt-32 pb-16 bg-gradient-to-r from-blue-900 to-blue-800 text-white relative overflow-hidden">
       <div class="absolute inset-0 bg-black/20"></div>
@@ -411,15 +385,11 @@
 
     <div class="container mx-auto px-6 py-20 max-w-5xl bg-slate-50 min-h-screen">
       <div class="space-y-16" id="research-container">
-        <!-- 研究内容はJSで動的生成します -->
-      </div>
+        </div>
     </div>
   </div>
 
 
-  <!-- ============================================== -->
-  <!-- 👥 MEMBER ページ -->
-  <!-- ============================================== -->
   <div id="page-member" class="page-section hidden">
     <div class="pt-32 pb-16 bg-gradient-to-r from-blue-900 to-blue-800 text-white relative overflow-hidden">
       <div class="absolute inset-0 bg-black/20"></div>
@@ -450,8 +420,7 @@
             
             <h4 class="text-lg font-bold border-b-2 border-slate-100 pb-3 mb-6 font-en uppercase tracking-wider lang-text" data-i18n="member.histTitle">Brief History</h4>
             <div class="space-y-4" id="history-container">
-              <!-- 略歴はJSで動的生成 -->
-            </div>
+              </div>
             
             <div class="mt-8 pt-6 border-t border-slate-100">
                <a href="https://researchmap.jp/7000016501" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors">
@@ -465,17 +434,13 @@
       <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12 fade-in opacity-0 translate-y-10 transition-all duration-1000 ease-out" data-delay="200">
         <h4 class="text-2xl font-bold border-b-2 border-slate-100 pb-4 mb-8 font-en uppercase tracking-wider text-center md:text-left lang-text" data-i18n="member.stdTitle">Students</h4>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" id="student-container">
-          <!-- 学生情報はJSで動的生成 -->
-        </div>
+          </div>
       </div>
 
     </div>
   </div>
 
 
-  <!-- ============================================== -->
-  <!-- 📚 PUBLICATIONS ページ -->
-  <!-- ============================================== -->
   <div id="page-publications" class="page-section hidden">
     <div class="pt-32 pb-16 bg-gradient-to-r from-blue-900 to-blue-800 text-white relative overflow-hidden">
       <div class="absolute inset-0 bg-black/20"></div>
@@ -487,18 +452,13 @@
 
     <div class="container mx-auto px-6 py-20 max-w-5xl bg-slate-50 min-h-screen">
       <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12">
-        <p class="text-gray-500 mb-10 text-sm lang-text" data-i18n="pub.note">※代表的な論文を掲載しています。</p>
-        <div class="space-y-10" id="pub-container">
-          <!-- 論文はJSで動的生成 -->
-        </div>
+        <div id="pub-container">
+          </div>
       </div>
     </div>
   </div>
 
 
-  <!-- ============================================== -->
-  <!-- フッター -->
-  <!-- ============================================== -->
   <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800 text-center font-en text-sm tracking-wider">
     <div class="container mx-auto px-6">
       <p>&copy; <span id="current-year"></span> <span data-i18n="footer" class="lang-text">Kawano Laboratory, Gifu University. All Rights Reserved.</span></p>
@@ -506,9 +466,6 @@
   </footer>
 
 
-  <!-- ============================================== -->
-  <!-- ⚙️ JavaScript （機能とアニメーション） -->
-  <!-- ============================================== -->
   <script>
     // ------------------------------------
     // 多言語切り替えロジック
@@ -517,7 +474,6 @@
       return path.split('.').reduce((o, i) => o ? o[i] : null, obj);
     }
 
-    // 🌟 fadeObserver の定義を上に移動
     const fadeObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -535,23 +491,23 @@
       document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
     }
 
-
     function renderDynamicLists() {
       const data = SITE_DATA[currentLang];
       
       // 1. Gallery
-      const galleryHtml = data.about.gallery.map(item => `
-        <div class="snap-center shrink-0 w-[85vw] md:w-[500px] lg:w-[600px] bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.03)] select-none">
-          <div class="w-full h-48 md:h-64 bg-slate-200 relative pointer-events-none">
-             <img src="${item.img}" alt="${item.title}" class="w-full h-full object-cover" draggable="false" />
-          </div>
-          <div class="p-6 md:p-8 pointer-events-none">
-            <h4 class="font-bold text-lg text-slate-900 mb-3">${item.title}</h4>
-            <p class="text-slate-600 text-sm leading-relaxed">${item.desc}</p>
-          </div>
-        </div>
-      `).join('');
-      document.getElementById('gallery-slider').innerHTML = galleryHtml;
+      // const galleryHtml = data.about.gallery.map(item => `
+      //   <div class="snap-center shrink-0 w-[85vw] md:w-[500px] lg:w-[600px] bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.03)] select-none">
+      //     <div class="w-full h-48 md:h-64 bg-slate-200 relative pointer-events-none">
+      //        <img src="${item.img}" alt="${item.title}" class="w-full h-full object-contain" draggable="false" />
+      //     </div>
+      //     ${item.desc ? `
+      //     <div class="p-6 md:p-8 pointer-events-none">
+      //       <h4 class="font-bold text-lg text-slate-900 mb-3">${item.title}</h4>
+      //       <p class="text-slate-600 text-sm leading-relaxed">${item.desc}</p>
+      //     </div>` : ''}
+      //   </div>
+      // `).join('');
+      // document.getElementById('gallery-slider').innerHTML = galleryHtml;
 
       // 2. News
       const newsHtml = data.news.items.map(item => `
@@ -566,12 +522,11 @@
       document.getElementById('news-container').innerHTML = newsHtml;
 
       // 3. Research
-      // 🌟 修正: Research セクションの text-justify も text-left に変更
       const researchHtml = data.research.items.map(item => `
         <div class="bg-white rounded-2xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-gray-100 p-8 md:p-12 fade-in opacity-0 translate-y-10 transition-all duration-1000 ease-out">
           <div class="flex flex-col md:flex-row gap-8 items-start">
-            <div class="w-20 h-20 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0">
-              <i data-lucide="${item.icon}" class="text-blue-600 w-8 h-8"></i>
+            <div class="w-24 h-24 shrink-0 rounded-2xl flex items-center justify-center overflow-hidden bg-slate-50 border border-slate-100">
+              <img src="${item.img}" alt="Icon" class="h-16 object-contain" />
             </div>
             <div>
               <h3 class="text-2xl font-bold text-gray-900 mb-6 leading-tight">${item.title}</h3>
@@ -594,20 +549,19 @@
       const stdHtml = data.member.students.map(item => `
         <div class="bg-slate-50 p-6 rounded-xl text-center border border-slate-100">
           <div class="font-bold text-lg text-gray-900 mb-2">${item.grade}</div>
-          <div class="text-gray-600">${item.count}</div>
+          <div class="text-gray-600 leading-relaxed">${item.count}</div>
         </div>
       `).join('');
       document.getElementById('student-container').innerHTML = stdHtml;
 
       // 5. Publications
-      const pubHtml = data.pub.items.map(item => `
-        <article class="group fade-in opacity-0 translate-y-10 transition-all duration-1000 ease-out">
-          <div class="text-sm font-bold text-blue-600 mb-2 font-en tracking-wider">${item.year}</div>
-          <h3 class="text-lg font-bold text-gray-900 mb-3 leading-snug font-en group-hover:text-blue-600 transition-colors">${item.title}</h3>
-          <div class="text-gray-700 text-sm mb-1"><span class="italic font-en">${item.journal}</span></div>
-          <div class="text-gray-500 text-sm">${item.authors}</div>
-        </article>
-      `).join('');
+      const pubHtml = `
+        <div class="flex justify-center items-center py-10 fade-in opacity-0 translate-y-10 transition-all duration-1000 ease-out">
+           <a href="${data.pub.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-lg font-bold text-blue-600 hover:text-blue-800 transition-colors border-b-2 border-blue-600 pb-1">
+             <span class="lang-text">${data.pub.linkMsg}</span> <i data-lucide="external-link" class="ml-2 w-5 h-5"></i>
+           </a>
+        </div>
+      `;
       document.getElementById('pub-container').innerHTML = pubHtml;
 
       lucide.createIcons();
@@ -626,21 +580,23 @@
             else el.innerText = text;
           }
           el.style.opacity = '1';
-        }, 150); // フェードアウトの時間
+        }, 150); 
       });
       
-      // メタ情報の更新
       document.getElementById('html-tag').lang = currentLang;
       document.getElementById('meta-title').innerText = SITE_DATA[currentLang].meta.title;
       document.getElementById('meta-desc').content = SITE_DATA[currentLang].meta.desc;
 
-      // ボタンスタイルの更新
-      document.getElementById('btn-ja').className = currentLang === 'ja' ? 'font-bold text-blue-500' : 'font-normal hover:text-blue-500';
-      document.getElementById('btn-en').className = currentLang === 'en' ? 'font-bold text-blue-500' : 'font-normal hover:text-blue-500';
+      // ボタンの見た目更新
+      document.getElementById('btn-ja').className = currentLang === 'ja' ? 'font-bold text-blue-600' : 'font-normal text-slate-600 hover:text-blue-600';
+      document.getElementById('btn-en').className = currentLang === 'en' ? 'font-bold text-blue-600' : 'font-normal text-slate-600 hover:text-blue-600';
       document.getElementById('btn-ja-mob').className = currentLang === 'ja' ? 'font-bold text-blue-600' : 'text-slate-500';
       document.getElementById('btn-en-mob').className = currentLang === 'en' ? 'font-bold text-blue-600' : 'text-slate-500';
 
-      // リストや配列データの再レンダリング
+      if(document.getElementById('map-link')) {
+         document.getElementById('map-link').href = SITE_DATA[currentLang].contact.mapLink;
+      }
+
       setTimeout(() => renderDynamicLists(), 150);
     }
 
@@ -650,20 +606,28 @@
       updateLanguage();
     }
 
-    // ------------------------------------
-    // 基本設定とアイコン読み込み
-    // ------------------------------------
     document.getElementById('current-year').textContent = new Date().getFullYear();
-    
-    // 初回レンダリング
     renderDynamicLists();
     updateLanguage();
 
     // ------------------------------------
-    // 3. ページ遷移（ルーティング）
+    // ページ遷移（ルーティング）
     // ------------------------------------
     let currentPage = 'home';
     const pages = ['home', 'news', 'research', 'member', 'publications'];
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    function updateNavStyle() {
+      navLinks.forEach(link => {
+        if (link.getAttribute('data-target') === currentPage) {
+          link.classList.add('text-blue-600', 'font-bold');
+          link.classList.remove('text-slate-600');
+        } else {
+          link.classList.remove('text-blue-600', 'font-bold');
+          link.classList.add('text-slate-600');
+        }
+      });
+    }
 
     function navigateTo(pageId) {
       currentPage = pageId;
@@ -682,80 +646,45 @@
       });
     }
 
-    // ------------------------------------
-    // 4. ナビゲーションバーのスタイル制御
-    // ------------------------------------
-    const navbar = document.getElementById('navbar');
-    const navLinks = document.querySelectorAll('.nav-link');
-    const navLinksContainer = document.getElementById('nav-links-container');
-    
-    function updateNavStyle() {
-      const scrolled = window.scrollY > 20;
-      if (scrolled || currentPage !== 'home') {
-        navbar.classList.add('bg-white/95', 'backdrop-blur-sm', 'shadow-sm', 'py-4');
-        navbar.classList.remove('bg-transparent', 'py-6');
-        
-        navLinksContainer.classList.remove('text-slate-800', 'lg:text-white/90');
-        navLinksContainer.classList.add('text-slate-600');
-        
-        navLinks.forEach(link => {
-          if (link.getAttribute('data-target') === currentPage) {
-            link.classList.add('text-blue-500', 'font-bold');
-          } else {
-            link.classList.remove('text-blue-500', 'font-bold');
-          }
-        });
-      } else {
-        navbar.classList.add('bg-transparent', 'py-6');
-        navbar.classList.remove('bg-white/95', 'backdrop-blur-sm', 'shadow-sm', 'py-4');
-        
-        navLinksContainer.classList.remove('text-slate-600');
-        navLinksContainer.classList.add('text-slate-800', 'lg:text-white/90');
-        
-        navLinks.forEach(link => {
-          link.classList.remove('text-blue-500', 'font-bold');
-        });
-      }
-    }
-    window.addEventListener('scroll', updateNavStyle);
-    updateNavStyle(); 
+    // 初回読み込み時のメニュースタイル適用
+    updateNavStyle();
 
     function toggleMobileMenu() {
       document.getElementById('mobile-menu').classList.toggle('hidden');
     }
 
     // ------------------------------------
-    // 5. ギャラリースライダーのドラッグ＆スワイプ機能
+    // ギャラリースライダー制御
     // ------------------------------------
-    const slider = document.getElementById('gallery-slider');
-    let isDown = false;
-    let startX;
-    let scrollLeft;
+    // const slider = document.getElementById('gallery-slider');
+    // let isDown = false;
+    // let startX;
+    // let scrollLeft;
 
-    slider.addEventListener('mousedown', (e) => {
-      isDown = true;
-      slider.classList.add('active');
-      startX = e.pageX - slider.offsetLeft;
-      scrollLeft = slider.scrollLeft;
-    });
-    slider.addEventListener('mouseleave', () => {
-      isDown = false;
-      slider.classList.remove('active');
-    });
-    slider.addEventListener('mouseup', () => {
-      isDown = false;
-      slider.classList.remove('active');
-    });
-    slider.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - slider.offsetLeft;
-      const walk = (x - startX) * 2; 
-      slider.scrollLeft = scrollLeft - walk;
-    });
+    // slider.addEventListener('mousedown', (e) => {
+    //   isDown = true;
+    //   slider.classList.add('active');
+    //   startX = e.pageX - slider.offsetLeft;
+    //   scrollLeft = slider.scrollLeft;
+    // });
+    // slider.addEventListener('mouseleave', () => {
+    //   isDown = false;
+    //   slider.classList.remove('active');
+    // });
+    // slider.addEventListener('mouseup', () => {
+    //   isDown = false;
+    //   slider.classList.remove('active');
+    // });
+    // slider.addEventListener('mousemove', (e) => {
+    //   if (!isDown) return;
+    //   e.preventDefault();
+    //   const x = e.pageX - slider.offsetLeft;
+    //   const walk = (x - startX) * 2; 
+    //   slider.scrollLeft = scrollLeft - walk;
+    // });
 
     // ------------------------------------
-    // 6. 背景の分子ネットワークアニメーション
+    // 背景アニメーション
     // ------------------------------------
     const canvas = document.getElementById('network-canvas');
     const ctx = canvas.getContext('2d');
