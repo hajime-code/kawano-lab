@@ -193,8 +193,11 @@
     let currentLang = 'ja';
   </script>
 
+  <!-- ▼ モバイルメニュー時の背景バックドロップ ▼ -->
+  <div id="mobile-menu-backdrop" class="fixed inset-0 bg-slate-900/20 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300" onclick="closeMobileMenu()"></div>
+
   <nav id="navbar" class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 py-3 md:py-4 transition-all duration-300">
-    <div class="container mx-auto px-6 flex justify-between items-center">
+    <div class="container mx-auto px-6 flex justify-between items-center relative z-50">
       <div class="font-bold text-xl md:text-2xl font-en tracking-widest cursor-pointer transition-colors text-slate-900" onclick="navigateTo('home')">
         KAWANO<span class="font-light text-blue-600">LAB.</span>
       </div>
@@ -212,12 +215,15 @@
         </div>
       </div>
 
-      <button class="md:hidden text-slate-900" onclick="toggleMobileMenu()">
-        <i data-lucide="menu" id="mobile-menu-icon" class="w-7 h-7"></i>
+      <!-- ▼ ハンバーガーメニューボタン ▼ -->
+      <button class="md:hidden text-slate-900 w-7 h-7 relative focus:outline-none" onclick="toggleMobileMenu()">
+        <div id="icon-menu" class="absolute inset-0 transition-all duration-300 transform"><i data-lucide="menu" class="w-full h-full"></i></div>
+        <div id="icon-close" class="absolute inset-0 transition-all duration-300 transform opacity-0 rotate-90"><i data-lucide="x" class="w-full h-full"></i></div>
       </button>
     </div>
 
-    <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-100 py-4 font-en tracking-widest uppercase">
+    <!-- ▼ ふんわりアニメーションするモバイルメニュー ▼ -->
+    <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-md shadow-lg border-t border-gray-100 py-4 font-en tracking-widest uppercase transform -translate-y-4 opacity-0 pointer-events-none transition-all duration-300 ease-out z-40">
        <button onclick="navigateTo('home')" class="block w-full text-left px-6 py-3 text-slate-800 hover:bg-slate-50" data-i18n="nav.home">Home</button>
        <button onclick="navigateTo('news')" class="block w-full text-left px-6 py-3 text-slate-800 hover:bg-slate-50" data-i18n="nav.news">News</button>
        <button onclick="navigateTo('research')" class="block w-full text-left px-6 py-3 text-slate-800 hover:bg-slate-50" data-i18n="nav.research">Research</button>
@@ -285,21 +291,11 @@
           <p class="text-gray-600 leading-loose text-lg text-left max-w-3xl mx-auto whitespace-pre-line lang-text" data-i18n="about.desc"></p>
         </div>
 
-        <!-- 複数枚の場合には以下のスライダー -->
-        <!-- <div class="fade-in opacity-0 translate-y-10 transition-all duration-1000 ease-out" data-delay="200">
-          <div id="gallery-slider" class="mt-16 flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 hide-scrollbar cursor-grab slider-container">
-            </div>
-          <div class="flex justify-center mt-2 text-slate-400 text-xs tracking-widest uppercase font-en items-center gap-2 pointer-events-none">
-            <i data-lucide="arrow-right" class="transform rotate-180 w-3 h-3"></i> <span data-i18n="about.dragHint" class="lang-text">Drag to explore</span> <i data-lucide="arrow-right" class="w-3 h-3"></i>
-          </div>
-        </div> -->
-
         <div class="fade-in opacity-0 translate-y-10 mt-16 transition-all duration-1000 ease-out" data-delay="200">
           <div class="flex justify-center">
             <img src="src/img/about_img_01.png" alt="About Kawano Lab" class="max-w-full h-auto shadow-none">
           </div>
         </div>
-
       </div>
     </section>
 
@@ -434,19 +430,9 @@
       <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12 fade-in opacity-0 translate-y-10 transition-all duration-1000 ease-out" data-delay="200">
         <h4 class="text-2xl font-bold border-b-2 border-slate-100 pb-4 mb-8 font-en uppercase tracking-wider text-center md:text-left lang-text" data-i18n="member.stdTitle">Students</h4>
         
-        <!-- ▼ 集合写真プレースホルダー ▼ -->
-        <div class="mb-10 w-full bg-slate-50 rounded-xl border-2 border-slate-200 border-dashed aspect-[16/9] md:aspect-[21/9] flex items-center justify-center relative overflow-hidden">
-          <div class="text-slate-400 font-en tracking-widest uppercase flex flex-col items-center z-0">
-            <i data-lucide="camera" class="w-8 h-8 mb-3 opacity-60"></i>
-            <span class="text-sm font-medium">Group Photo Coming Soon</span>
-          </div>
-          <!-- 
-            写真を追加する際は、上の <div class="text-slate-400...">...</div> を削除するか非表示にし、
-            以下のコメントアウトを外して src 属性を実際の画像パスに変更してください。
-          -->
-          <!-- <img src="src/img/group_photo.jpg" alt="Lab Group Photo" class="absolute inset-0 w-full h-full object-cover z-10"> -->
+        <div class="mb-10 w-full bg-slate-50 rounded-xl aspect-[16/9] md:aspect-[21/9] relative overflow-hidden shadow-sm">
+          <img src="src/img/member_01.jpg" alt="Lab Group Photo" class="absolute inset-0 w-full h-full object-cover z-0">
         </div>
-        <!-- ▲ 集合写真プレースホルダー ▲ -->
 
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" id="student-container">
           </div>
@@ -509,22 +495,6 @@
     function renderDynamicLists() {
       const data = SITE_DATA[currentLang];
       
-      // 1. Gallery
-      // const galleryHtml = data.about.gallery.map(item => `
-      //   <div class="snap-center shrink-0 w-[85vw] md:w-[500px] lg:w-[600px] bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.03)] select-none">
-      //     <div class="w-full h-48 md:h-64 bg-slate-200 relative pointer-events-none">
-      //        <img src="${item.img}" alt="${item.title}" class="w-full h-full object-contain" draggable="false" />
-      //     </div>
-      //     ${item.desc ? `
-      //     <div class="p-6 md:p-8 pointer-events-none">
-      //       <h4 class="font-bold text-lg text-slate-900 mb-3">${item.title}</h4>
-      //       <p class="text-slate-600 text-sm leading-relaxed">${item.desc}</p>
-      //     </div>` : ''}
-      //   </div>
-      // `).join('');
-      // document.getElementById('gallery-slider').innerHTML = galleryHtml;
-
-      // 2. News
       const newsHtml = data.news.items.map(item => `
         <div class="flex flex-col md:flex-row md:items-start py-5 border-b border-gray-100 last:border-0 hover:bg-slate-50 transition-colors px-4 -mx-4 rounded-lg group fade-in opacity-0 translate-y-10 transition-all duration-1000 ease-out">
           <div class="flex items-center w-40 shrink-0 mb-2 md:mb-0 pt-1">
@@ -536,7 +506,6 @@
       `).join('');
       document.getElementById('news-container').innerHTML = newsHtml;
 
-      // 3. Research
       const researchHtml = data.research.items.map(item => `
         <div class="bg-white rounded-2xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-gray-100 p-8 md:p-12 fade-in opacity-0 translate-y-10 transition-all duration-1000 ease-out">
           <div class="flex flex-col md:flex-row gap-8 items-start">
@@ -552,7 +521,6 @@
       `).join('');
       document.getElementById('research-container').innerHTML = researchHtml;
 
-      // 4. Member History & Students
       const histHtml = data.member.history.map(item => `
         <div class="flex flex-col sm:flex-row gap-2 sm:gap-6">
           <div class="text-gray-400 font-en text-sm shrink-0 pt-1 tracking-wider">${item.year}</div>
@@ -569,7 +537,6 @@
       `).join('');
       document.getElementById('student-container').innerHTML = stdHtml;
 
-      // 5. Publications
       const pubHtml = `
         <div class="flex justify-center items-center py-10 fade-in opacity-0 translate-y-10 transition-all duration-1000 ease-out">
            <a href="${data.pub.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-lg font-bold text-blue-600 hover:text-blue-800 transition-colors border-b-2 border-blue-600 pb-1">
@@ -602,7 +569,6 @@
       document.getElementById('meta-title').innerText = SITE_DATA[currentLang].meta.title;
       document.getElementById('meta-desc').content = SITE_DATA[currentLang].meta.desc;
 
-      // ボタンの見た目更新
       document.getElementById('btn-ja').className = currentLang === 'ja' ? 'font-bold text-blue-600' : 'font-normal text-slate-600 hover:text-blue-600';
       document.getElementById('btn-en').className = currentLang === 'en' ? 'font-bold text-blue-600' : 'font-normal text-slate-600 hover:text-blue-600';
       document.getElementById('btn-ja-mob').className = currentLang === 'ja' ? 'font-bold text-blue-600' : 'text-slate-500';
@@ -624,6 +590,46 @@
     document.getElementById('current-year').textContent = new Date().getFullYear();
     renderDynamicLists();
     updateLanguage();
+
+    // ------------------------------------
+    // モバイルメニューの制御
+    // ------------------------------------
+    let isMobileMenuOpen = false;
+
+    function toggleMobileMenu() {
+      isMobileMenuOpen = !isMobileMenuOpen;
+      updateMobileMenuUI();
+    }
+
+    function closeMobileMenu() {
+      if (isMobileMenuOpen) {
+        isMobileMenuOpen = false;
+        updateMobileMenuUI();
+      }
+    }
+
+    function updateMobileMenuUI() {
+      const menu = document.getElementById('mobile-menu');
+      const backdrop = document.getElementById('mobile-menu-backdrop');
+      const iconMenu = document.getElementById('icon-menu');
+      const iconClose = document.getElementById('icon-close');
+
+      if (isMobileMenuOpen) {
+        // メニューを表示
+        menu.classList.remove('opacity-0', '-translate-y-4', 'pointer-events-none');
+        backdrop.classList.remove('opacity-0', 'pointer-events-none');
+        // アイコンを×に回転切替
+        iconMenu.classList.add('opacity-0', '-rotate-90');
+        iconClose.classList.remove('opacity-0', 'rotate-90');
+      } else {
+        // メニューを非表示
+        menu.classList.add('opacity-0', '-translate-y-4', 'pointer-events-none');
+        backdrop.classList.add('opacity-0', 'pointer-events-none');
+        // アイコンを三本線に戻す
+        iconMenu.classList.remove('opacity-0', '-rotate-90');
+        iconClose.classList.add('opacity-0', 'rotate-90');
+      }
+    }
 
     // ------------------------------------
     // ページ遷移（ルーティング）
@@ -648,9 +654,22 @@
       currentPage = pageId;
       pages.forEach(id => document.getElementById(`page-${id}`).classList.add('hidden'));
       document.getElementById(`page-${pageId}`).classList.remove('hidden');
-      document.getElementById('mobile-menu').classList.add('hidden');
+      
+      closeMobileMenu(); // メニューを閉じる処理を新しい関数に置き換え
+
       window.scrollTo(0, 0);
       updateNavStyle();
+
+      const canvas = document.getElementById('network-canvas');
+      const targetPage = document.getElementById(`page-${pageId}`);
+      const bgContainer = pageId === 'home' 
+        ? targetPage.querySelector('.bg-gradient-to-br')
+        : targetPage.querySelector('.bg-gradient-to-r');
+
+      if (canvas && bgContainer) {
+        bgContainer.insertBefore(canvas, bgContainer.firstChild);
+        resizeCanvas();
+      }
 
       const elements = document.querySelectorAll(`#page-${pageId} .fade-in`);
       elements.forEach(el => {
@@ -661,42 +680,7 @@
       });
     }
 
-    // 初回読み込み時のメニュースタイル適用
     updateNavStyle();
-
-    function toggleMobileMenu() {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
-    }
-
-    // ------------------------------------
-    // ギャラリースライダー制御
-    // ------------------------------------
-    // const slider = document.getElementById('gallery-slider');
-    // let isDown = false;
-    // let startX;
-    // let scrollLeft;
-
-    // slider.addEventListener('mousedown', (e) => {
-    //   isDown = true;
-    //   slider.classList.add('active');
-    //   startX = e.pageX - slider.offsetLeft;
-    //   scrollLeft = slider.scrollLeft;
-    // });
-    // slider.addEventListener('mouseleave', () => {
-    //   isDown = false;
-    //   slider.classList.remove('active');
-    // });
-    // slider.addEventListener('mouseup', () => {
-    //   isDown = false;
-    //   slider.classList.remove('active');
-    // });
-    // slider.addEventListener('mousemove', (e) => {
-    //   if (!isDown) return;
-    //   e.preventDefault();
-    //   const x = e.pageX - slider.offsetLeft;
-    //   const walk = (x - startX) * 2; 
-    //   slider.scrollLeft = scrollLeft - walk;
-    // });
 
     // ------------------------------------
     // 背景アニメーション
@@ -707,8 +691,13 @@
     let particles = [];
 
     function resizeCanvas() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      if (canvas.parentElement) {
+        canvas.width = canvas.parentElement.offsetWidth;
+        canvas.height = canvas.parentElement.offsetHeight;
+      } else {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
       initParticles();
     }
 
